@@ -1,0 +1,16 @@
+spring:
+  redis:
+    remote: false        #cachecloud ªÒ»°
+    host: 127.0.0.1
+    port: 6379
+    password:
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: pig
+    password: lengleng
+  http:
+    multipart:
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+
