@@ -1,0 +1,32 @@
+server:
+  port: 7777
+sharding:
+  jdbc:
+    defaultDataSourceName:
+      type: com.zaxxer.hikari.HikariDataSource
+      driver-class-name: com.mysql.jdbc.Driver
+      username: root
+      password: qwer1234
+      jdbc-url: jdbc:mysql://192.168.140.151:3306/pig?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowMultiQueries=true
+    datasource:
+      names: ds
+      ds:
+        type: com.zaxxer.hikari.HikariDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        password: qwer1234
+        jdbc-url: jdbc:mysql://192.168.140.151:3306/pig?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowMultiQueries=true
+    config:
+      sharding:
+        tables:
+          sys_log:
+            actual-data-nodes: ds.sys_log_${0..1}
+            table-strategy:
+              inline:
+                sharding-column: id
+                algorithm-expression: sys_log_${id % 2}
+            key-generator-column-name: id
+
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*Mapper.xml
+  typeAliasesPackage: com.wangan.qin.module.upms.service.model.entity
