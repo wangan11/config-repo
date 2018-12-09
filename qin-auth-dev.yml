@@ -21,6 +21,6 @@ ignore:
         - /loggers/**
         - /mobile/token
        
-auth：
+auth:
     loginPage: /authentication/require
     loginProcessingUrl: /authentication/form
