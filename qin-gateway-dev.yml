@@ -1,0 +1,13 @@
+server:
+    port: 9999
+ignore:
+  urls:
+    - /admin/code/*
+    - /auth/**
+  clients:
+    - app
+
+security:
+    validate:
+        code: true
+    
