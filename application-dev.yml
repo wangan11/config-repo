@@ -4,6 +4,19 @@ spring:
     port: 6479
     password:
 
+hystrix:
+  threadpool:
+    default:
+      coreSize: 500
+      maxQueueSize: 1000
+      queueSizeRejectionThreshold: 800
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 60000
+    
 management:
   security:
     enabled: false
