@@ -1,0 +1,22 @@
+server:
+    port: 3000
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: lengleng
+    url: jdbc:mysql:///192.168.140.151:3306/pig?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false
+    
+ignore:
+    urls:
+        - /authentication/**
+        - /**/*.css
+        - /social
+        - /signin
+        - /signup
+        - /info
+        - /health
+        - /metrics/**
+        - /loggers/**
+        - /mobile/token
