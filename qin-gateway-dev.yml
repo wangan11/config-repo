@@ -9,3 +9,7 @@ ignore:
    clients:
        - app
 
+security:
+    validate:
+        code: true
+    

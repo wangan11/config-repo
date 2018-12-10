@@ -1,5 +1,20 @@
+#加密配置
+jasypt:
+  encryptor:
+    password: lengleng
+    
 spring:
   redis:
     host: 192.168.140.157
     port: 6479
     password:
+
+    
+management:
+  security:
+    enabled: false
+endpoints:
+  actuator:
+    enabled: true
+  shutdown:
+    enabled: false
