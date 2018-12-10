@@ -10,12 +10,18 @@ ignore:
        - app
 
 security:
+  encode:
+    key: '1234567887654321' #必须16位
   validate:
-    code: false
+    code: true
+    preview: false
   sessions: stateless
   oauth2:
     client:
       client-id: pig
       client-secret: pig
+    resource:
+      jwt:
+         key-uri: ${security.auth.server}/oauth/token_key #解析jwt令牌所需要密钥的地址
 
 
