@@ -1,17 +1,24 @@
 server:
-    port: 9999
+   port: 7777
+
 ignore:
-  urls:
-    - /admin/code/*
-    - /auth/**
-  clients:
-    - app
+   urls:
+       - /mobile/**
+       - /admin/code/*
+       - /admin/smsCode/*
+   clients:
+       - app
 
 security:
     validate:
+<<<<<<< HEAD
         code: false
     sessions: stateless
     oauth2:
         client:
           client-id: pig
           client-secret: pig
+=======
+        code: true
+    
+>>>>>>> ea5de21aaef2f731e985b57ac5f0553a25ec14f0
