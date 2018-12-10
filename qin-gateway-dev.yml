@@ -1,0 +1,11 @@
+server:
+   port: 7777
+
+ignore:
+   urls:
+       - /mobile/**
+       - /admin/code/*
+       - /admin/smsCode/*
+   clients:
+       - app
+
