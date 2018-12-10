@@ -1,13 +1,6 @@
 server:
    port: 9999
 
-ignore:
-   urls:
-       - /mobile/**
-       - /admin/code/*
-       - /admin/smsCode/*
-   clients:
-       - app
 
 security:
   encode:
@@ -24,4 +17,20 @@ security:
       jwt:
          key-uri: ${security.auth.server}/oauth/token_key #解析jwt令牌所需要密钥的地址
 
+
+ignore:
+  urls:
+    - /mobile/**
+    - /auth/**
+    - /admin/code/*
+    - /admin/smsCode/*
+    - /admin/user/info
+    - /admin/menu/userMenu
+    - /swagger-resources/**
+    - /swagger-ui.html
+    - /*/v2/api-docs
+    - /swagger/api-docs
+    - /webjars/**
+  clients:
+    - app
 
