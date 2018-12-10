@@ -9,5 +9,9 @@ ignore:
 
 security:
     validate:
-        code: true
-    
+        code: false
+    sessions: stateless
+    oauth2:
+        client:
+          client-id: pig
+          client-secret: pig
