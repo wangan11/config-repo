@@ -1,12 +1,18 @@
 server:
    port: 9999
 
+zuul:
+  ribbon:
+    eager-load:
+      enabled: true
+      clients: qin-auth,qin-upms-service
+  ignoredServices: '*'
 
 security:
   encode:
     key: '1234567887654321' #必须16位
   validate:
-    code: false
+    code: true
     preview: false
   sessions: stateless
   oauth2:
